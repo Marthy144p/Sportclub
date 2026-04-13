@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Login</title>
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<header>
+<img src="img/logo.png">
+</header>
+
+<form class="center-box" onsubmit="login(event)">
+<h2>Login</h2>
+
+<input type="email" id="correo" required placeholder="Correo">
+<input type="password" id="password" required placeholder="Contraseña">
+
+<button class="btn">Ingresar</button>
+
+<p id="error" style="color:red; margin-top:10px;"></p>
+
+<a href="recuperar.html" class="link">Recuperar contraseña</a>
+<a href="registro.html" class="link">Registrarse</a>
+</form>
+
+<script src="js/login.js"></script>
+
+</body>
+</html>
