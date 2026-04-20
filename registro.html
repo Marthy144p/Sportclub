@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <title>Registro - SportClub</title>
-    <link rel="stylesheet" href="css/styles.css">
+<meta charset="UTF-8">
+<title>Registro - SportClub</title>
+<link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
 
@@ -11,18 +11,70 @@
     <img src="img/logo.png">
 </header>
 
-<div class="center-box">
+<form class="center-box" onsubmit="validarRegistro(event)">
     <h2>Crear Cuenta</h2>
 
-    <input type="text" placeholder="Nombre completo">
-    <input type="email" placeholder="Correo">
-    <input type="password" placeholder="Contraseña">
+    <input type="text" id="nombre" placeholder="Nombre completo" required>
+    <input type="email" id="correo" placeholder="Correo" required>
+
+    <input type="password" id="pass1" placeholder="Contraseña" required>
+    <input type="password" id="pass2" placeholder="Repetir contraseña" required>
+
+    <div style="margin:10px 0; text-align:left;">
+    <label>Fecha de nacimiento</label>
+
+    <div style="display:flex; gap:10px; margin-top:5px;">
+
+        <!-- DÍA -->
+        <select required style="flex:1; padding:8px;">
+            <option value="">Día</option>
+            <script>
+                for(let i=1;i<=31;i++){
+                    document.write(`<option value="${i}">${i}</option>`)
+                }
+            </script>
+        </select>
+
+        <!-- MES -->
+        <select required style="flex:1; padding:8px;">
+            <option value="">Mes</option>
+            <option value="1">Enero</option>
+            <option value="2">Febrero</option>
+            <option value="3">Marzo</option>
+            <option value="4">Abril</option>
+            <option value="5">Mayo</option>
+            <option value="6">Junio</option>
+            <option value="7">Julio</option>
+            <option value="8">Agosto</option>
+            <option value="9">Septiembre</option>
+            <option value="10">Octubre</option>
+            <option value="11">Noviembre</option>
+            <option value="12">Diciembre</option>
+        </select>
+
+        <!-- AÑO -->
+        <select required style="flex:1; padding:8px;">
+            <option value="">Año</option>
+            <script>
+                for(let i=2025;i>=1950;i--){
+                    document.write(`<option value="${i}">${i}</option>`)
+                }
+            </script>
+        </select>
+
+    </div>
+</div>
+
     <input type="text" placeholder="Intereses (opcional)">
 
     <button class="btn">Registrarse</button>
 
+    <p id="error" style="color:red; margin-top:10px;"></p>
+
     <a href="login.html" class="link">Volver al login</a>
-</div>
+</form>
+
+<script src="js/registro.js"></script>
 
 </body>
 </html>
