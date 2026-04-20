@@ -1,43 +1,54 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <title>SportClub</title>
-    <link rel="stylesheet" href="css/styles.css">
+<meta charset="UTF-8">
+<title>SportClub</title>
+<link rel="stylesheet" href="css/styles.css">
 </head>
+
 <body>
 
 <header>
     <img src="img/logo.png">
     <nav>
-        <a href="login.html">Ingresar</a>
-        <a href="registro.html">Registrarse</a>
+        <a href="login.html" class="nav-btn">Ingresar</a>
+        <a href="registro.html" class="nav-btn primary">Registrarse</a>
     </nav>
 </header>
 
-<section class="card">
+<!-- HERO -->
+<section class="hero">
     <h1>Tu mejor versión comienza hoy</h1>
-    <p>En SportClub creemos que el deporte transforma tu vida.</p>
+    <p>Entrena, supera tus límites y transforma tu vida con SportClub</p>
 </section>
+
+<!-- CONTENIDO -->
+<main class="landing">
 
 <section class="card">
     <h2>¿Quiénes somos?</h2>
-    <p>Somos una comunidad enfocada en el bienestar y la superación personal.</p>
+    <p>Somos una comunidad enfocada en el bienestar, el compromiso y la superación personal.</p>
 </section>
 
 <section class="card">
     <h2>Beneficios</h2>
-    <ul>
-        <li>Entrenadores especializados</li>
-        <li>Programas personalizados</li>
-        <li>Ambiente motivador</li>
-    </ul>
+    <div class="grid">
+        <div class="mini-card">🏋️ Entrenadores especializados</div>
+        <div class="mini-card">📋 Programas personalizados</div>
+        <div class="mini-card">🔥 Ambiente motivador</div>
+    </div>
 </section>
 
 <section class="card">
     <h2>Visión</h2>
-    <p>Ser el club deportivo referente en tecnología y entrenamiento.</p>
+    <p>Ser el club deportivo referente en tecnología, entrenamiento y comunidad.</p>
 </section>
+
+</main>
+
+<footer class="footer">
+    <p>© 2026 SportClub - Todos los derechos reservados</p>
+</footer>
 
 </body>
 </html>
