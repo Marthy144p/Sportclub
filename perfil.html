@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Mi Perfil</title>
+<link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body class="usuario">
+
+<header class="topbar">
+<img src="img/logo.png">
+
+<nav>
+    <a href="#" onclick="volverInicio()">Inicio</a>
+    <a class="active">Perfil</a>
+</nav>
+
+<div>
+    <button class="btn btn-small" onclick="logout()">Cerrar Sesión</button>
+</div>
+</header>
+
+<main class="main-content">
+
+<h2>Mi Perfil</h2>
+<p style="color:white; margin-bottom:15px;">Gestiona tu información personal</p>
+
+<div class="perfil-layout">
+
+<div class="card perfil-card">
+
+<div class="avatar">👤</div>
+
+<h3 id="nombreTexto">Cargando...</h3>
+
+<p id="emailTexto"></p>
+
+<p id="rolTexto"></p>
+
+<hr>
+
+<p><strong>Fecha nacimiento:</strong></p>
+<p id="fechaTexto"></p>
+
+<p><strong>Fecha registro:</strong></p>
+<p id="registroTexto"></p>
+
+</div>
+
+<div>
+
+<div class="card">
+
+<h3>Información Personal</h3>
+
+<form onsubmit="actualizarPerfil(event)">
+
+<label>Nombre completo</label>
+<input type="text" id="nombre" required>
+
+<label>Email</label>
+<input type="email" id="email" disabled>
+
+<label>Fecha de nacimiento</label>
+<input type="date" id="fecha" required>
+
+<label>Otros / Metadata</label>
+<textarea id="metadata" placeholder="Ej: intereses, deporte favorito, objetivo personal"></textarea>
+
+<p id="errorPerfil" class="error"></p>
+<p id="mensajePerfil" class="success"></p>
+
+<button class="btn">Guardar cambios</button>
+
+</form>
+
+</div>
+
+<div class="card">
+
+<h3>Seguridad</h3>
+
+<form onsubmit="cambiarPassword(event)">
+
+<input type="password" id="actual" placeholder="Contraseña actual" required>
+<input type="password" id="nueva" placeholder="Nueva contraseña" required>
+<input type="password" id="confirmar" placeholder="Confirmar contraseña" required>
+
+<p id="errorPassword" class="error"></p>
+<p id="mensajePassword" class="success"></p>
+
+<button class="btn">Actualizar contraseña</button>
+
+</form>
+
+</div>
+
+</div>
+
+</div>
+
+</main>
+
+<script src="js/api.js"></script>
+<script src="js/auth.js"></script>
+<script src="js/perfil.js"></script>
+
+</body>
+</html>

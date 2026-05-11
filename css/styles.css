@@ -244,3 +244,171 @@ nav a {
     background: rgba(0,0,0,0.5);
     z-index: -1;
 }
+
+/* VALIDACIONES */
+
+.error {
+    color: red;
+    font-size: 13px;
+    margin-top: 5px;
+}
+
+.success {
+    color: green;
+    font-size: 13px;
+    margin-top: 5px;
+}
+
+.input-error {
+    border: 1px solid red;
+}
+
+/* BADGES */
+
+.badge {
+    padding: 5px 10px;
+    border-radius: 20px;
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.badge.admin {
+    background: #e53935;
+}
+
+.badge.coach {
+    background: #1e88e5;
+}
+
+.badge.user {
+    background: #43a047;
+}
+
+/* TABLAS */
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+th,
+td {
+    padding: 12px;
+    border-bottom: 1px solid #ddd;
+    text-align: left;
+}
+
+th {
+    background: #2E1A47;
+    color: white;
+}
+
+/* BOTONES CRUD */
+
+.btn-delete {
+    background: #e53935;
+    color: white;
+    border: none;
+    padding: 6px 10px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.btn-edit {
+    background: #1e88e5;
+    color: white;
+    border: none;
+    padding: 6px 10px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+
+/* MENU ACTIVO */
+
+.active {
+    border-bottom: 2px solid #F2B705;
+}
+
+/* SELECTS */
+
+select {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+}
+
+/* ESPACIADO TABLAS */
+
+td button {
+    margin-right: 5px;
+}
+
+/* PERFIL */
+
+.card p {
+    margin: 10px 0;
+}
+
+.card strong {
+    color: #2E1A47;
+}
+
+/* PERFIL MEJORADO */
+
+.perfil-layout {
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    gap: 20px;
+}
+
+.perfil-card {
+    text-align: center;
+}
+
+.avatar {
+    width: 90px;
+    height: 90px;
+    background: #eee;
+    border-radius: 50%;
+    margin: 0 auto 15px auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 40px;
+}
+
+textarea {
+    width: 100%;
+    min-height: 90px;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    resize: vertical;
+}
+
+label {
+    display: block;
+    text-align: left;
+    margin-top: 10px;
+    font-weight: bold;
+    color: #2E1A47;
+}
+
+hr {
+    margin: 15px 0;
+    border: none;
+    border-top: 1px solid #ddd;
+}
+
+@media (max-width: 800px) {
+    .perfil-layout {
+        grid-template-columns: 1fr;
+    }
+}

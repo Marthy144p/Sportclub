@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Gestión de Usuarios</title>
+<link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body class="admin">
+
+<header class="topbar">
+<img src="img/logo.png">
+
+<nav>
+    <a href="dashboard-admin.html">Inicio</a>
+    <a class="active">Usuarios</a>
+    <a href="perfil.html">Perfil</a>
+</nav>
+
+<div>
+    <button class="btn btn-small" onclick="logout()">Cerrar Sesión</button>
+</div>
+</header>
+
+<main class="main-content">
+
+<h2>Gestión de Usuarios</h2>
+<p style="color:white; margin-bottom:15px;">Administra los usuarios del sistema</p>
+<p id="mensajeGeneral" class="success"></p>
+<p id="errorGeneral" class="error"></p>
+<div id="confirmarEliminar" class="card" style="display:none;">
+    <p>¿Seguro que deseas eliminar este usuario?</p>
+
+    <button class="btn-delete" onclick="confirmarEliminarUsuario()">
+        Sí, eliminar
+    </button>
+
+    <button class="btn-edit" onclick="cancelarEliminarUsuario()">
+        Cancelar
+    </button>
+</div>
+<div class="card">
+
+<div style="display:flex; justify-content:space-between; align-items:center;">
+    <h3>Listado de Usuarios</h3>
+
+    <button class="btn btn-small" onclick="mostrarFormularioNuevo()">
+        ➕ Nuevo Usuario
+    </button>
+</div>
+
+<table>
+<thead>
+<tr>
+    <th>ID</th>
+    <th>Nombre completo</th>
+    <th>Email</th>
+    <th>Rol</th>
+    <th>Fecha registro</th>
+    <th>Acciones</th>
+</tr>
+</thead>
+
+<tbody id="tablaUsuarios"></tbody>
+</table>
+
+</div>
+
+<div class="card" id="formularioCard" style="display:none;">
+
+<h3 id="tituloFormulario">Nuevo Usuario</h3>
+
+<form onsubmit="guardarUsuario(event)">
+
+<input type="hidden" id="usuarioId">
+
+<input type="text" id="nombre" placeholder="Nombre completo" required>
+
+<input type="email" id="correo" placeholder="Correo" required>
+
+<select id="rol" required>
+    <option value="">Seleccione rol</option>
+    <option value="user">Usuario</option>
+    <option value="coach">Coach</option>
+    <option value="admin">Admin</option>
+</select>
+
+<input type="password" id="password" placeholder="Contraseña">
+
+<input type="password" id="confirmar" placeholder="Confirmar contraseña">
+
+<p id="error" class="error"></p>
+<p id="mensaje" class="success"></p>
+
+<div style="display:flex; gap:10px;">
+    <button type="button" class="btn btn-small" onclick="cancelarFormulario()">
+        Cancelar
+    </button>
+
+    <button class="btn btn-small">
+        💾 Guardar
+    </button>
+</div>
+
+</form>
+
+</div>
+
+</main>
+
+<script src="js/api.js"></script>
+<script src="js/auth.js"></script>
+<script src="js/usuarios.js"></script>
+
+</body>
+</html>
